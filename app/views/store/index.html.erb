@@ -2,6 +2,10 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<% if @visitings > 4 %>
+<span class="price">You have visited this page <%=pluralize(@visitings, 'time')%></span>
+<% end %>
+
 <h1>Your Pragmatic Catalog</h1>
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>
@@ -11,11 +15,10 @@
 			<h3><%= product.title %></h3>
 			<%= sanitize(product.description) %>
 			<div class="price_line">
-				<span class="price"><%= number_to_currency(product.price, unit: "₴ ") %></span>
+				<span class="price"><%= number_to_currency(product.price) %></span>
 				<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
 			</div>
 		</div>
 	<% end %>
 	<% end %>
 <% end %>
-<span class="price"><%=@visitings%></span>
