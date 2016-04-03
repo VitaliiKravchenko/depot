@@ -1,4 +1,6 @@
 class StoreController < ApplicationController
+  include CurrentCart
+  before_action :set_cart
 
 	def session_counter
 		if session[:counter].nil?
