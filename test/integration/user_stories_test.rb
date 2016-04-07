@@ -56,4 +56,14 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_equal 'Sam Ruby <depot@example.com>', mail[:from].value
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
   end
+  test "should mail the admin when error occurs" do
+    get "/carts/wibble" 
+    assert_response :redirect  # should redirect to...
+    assert_redirected_to store_path        # ...store index
+
+    #mail = ActionMailer::Base.deliveries.last
+    #assert_equal ["abc@xmail.com"], mail.to  ## replace mail id
+    #assert_equal "some one <depot@example.com>", mail[:from].value  ## replace contact name/mail id
+    #assert_equal "Depot App Error Incident", mail.subject
+  end
 end
