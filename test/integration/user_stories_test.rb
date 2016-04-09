@@ -59,7 +59,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
   test "should mail the admin when error occurs" do
     get "/carts/wibble" 
     assert_response :redirect  # should redirect to...
-    assert_redirected_to store_path        # ...store index
+    assert_redirected_to login_path        # ...store index
 
     #mail = ActionMailer::Base.deliveries.last
     #assert_equal ["abc@xmail.com"], mail.to  ## replace mail id
