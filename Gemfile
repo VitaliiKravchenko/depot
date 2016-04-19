@@ -58,4 +58,5 @@ gem 'capistrano-rails'
 # gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 # Add this if you're using rvm
- gem 'capistrano-rvm', github: "capistrano/rvm"
+# gem 'capistrano-rvm', github: "capistrano/rvm"
+ gem 'capistrano-rvm'
