@@ -8,12 +8,13 @@
 
 <h1><%= t('.title_html') %></h1>
 <!-- END_HIGHLIGHT -->
-<% cache ['store', Product.latest] do %>
+<% cache ['store', Product.where(locale: I18n.locale)] do %>
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
       <div class="entry">
         <%= image_tag(product.image_url) %>
         <h3><%= product.title %></h3>
+        <h3><%= product.locale %></h3>
         <%= sanitize(product.description) %>
         <div class="price_line">
           <span class="price"><%= number_to_currency(product.price) %></span>
