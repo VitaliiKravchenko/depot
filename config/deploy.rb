@@ -1,7 +1,7 @@
 set :application, 'depot'
 set :repo_url, 'https://github.com/VitaliiKravchenko/depot.git'
 
-set :deploy_to, '/home/deployer/depot'
+set :deploy_to, '/home/deploy/depot'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

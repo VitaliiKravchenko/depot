@@ -1,7 +1,7 @@
 set :stage, :production
 
 # Replace 127.0.0.1 with your server's IP address!
-server '192.168.2.120', user: 'deployer', roles: %w{web app}
+server '192.168.2.120', user: 'deploy', roles: %w{web app}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
