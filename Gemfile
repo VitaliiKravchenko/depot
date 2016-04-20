@@ -60,3 +60,4 @@ gem 'capistrano-rails'
 # Add this if you're using rvm
 # gem 'capistrano-rvm', github: "capistrano/rvm"
  gem 'capistrano-rvm'
+ gem 'nokogiri'
