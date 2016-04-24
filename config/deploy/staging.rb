@@ -59,8 +59,3 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-
-set :stage, :production
-
-# Replace 127.0.0.1 with your server's IP address!
-server '192.168.1.102', user: 'deployer', roles: %w{web app}
