@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
+gem 'capistrano-passenger'
 
 # Add this if you're using rbenv
 # gem 'capistrano-rbenv', github: "capistrano/rbenv"
