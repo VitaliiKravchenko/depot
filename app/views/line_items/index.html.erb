@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Line Items</h1>
+<h1>Список товарних позицій</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Product</th>
-      <th>Cart</th>
+      <th>Продуктова</th>
+      <th>Корзина</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= line_item.product %></td>
         <td><%= line_item.cart %></td>
-        <td><%= link_to 'Show', line_item %></td>
-        <td><%= link_to 'Edit', edit_line_item_path(line_item) %></td>
-        <td><%= link_to 'Destroy', line_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Показати', line_item %></td>
+        <td><%= link_to 'Редагувати', edit_line_item_path(line_item) %></td>
+        <td><%= link_to 'Видалити', line_item, method: :delete, data: { confirm: 'Ви впевнені?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Line item', new_line_item_path %>
+<%= link_to 'Нова товарна позиція', new_line_item_path %>

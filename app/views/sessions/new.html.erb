@@ -4,17 +4,17 @@
   <% end %>
   <%= form_tag do %>
     <fieldset>
-      <legend>Please Log In</legend>
+      <legend>Будь-ласка, ввійдіть в систему</legend>
       <div>
-        <%= label_tag :name, 'Name:' %>
+        <%= label_tag :name, "Ім'я:" %>
         <%= text_field_tag :name, params[:name] %>
       </div>
       <div>
-        <%= label_tag :password, 'Password:' %>
+        <%= label_tag :password, 'Пароль:' %>
         <%= password_field_tag :password, params[:password] %>
       </div>
       <div>
-        <%= submit_tag "Login" %>
+        <%= submit_tag "Увійти" %>
       </div>
     </fieldset>
   <% end %>

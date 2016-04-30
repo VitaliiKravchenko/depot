@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Назва:</strong>
   <%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Опис:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Image url:</strong>
+  <strong>Посилання на зображення url:</strong>
   <%= @product.image_url %>
 </p>
 
 <p>
-  <strong>Locale:</strong>
+  <strong>Мова:</strong>
   <%= @product.locale %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Ціна:</strong>
   <%= @product.price %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Редагувати', edit_product_path(@product) %> |
+<%= link_to 'Назад', products_path %>

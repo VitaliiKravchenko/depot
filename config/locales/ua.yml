@@ -1,0 +1,73 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+ua:
+
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit:      "Грн."
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+#START:errors
+  errors:
+    template:
+      body:        "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+#START:layout
+  layouts:
+    application:
+      title:       "Свічки на замовлення"
+      home:        "Додому"
+      questions:   "Запитання"
+      news:        "Новини"
+      contact:     "Контакти"
+#END:layout
+
+#START:cart
+  carts:
+    cart:
+      title:       "Ваша корзина"
+      empty:       "Очистити корзину"
+      checkout:    "Оформити замовлення"
+#END:cart
+
+#START:main
+  store:
+    index:
+      title_html:  "Каталог свічок"
+      add_html:    "Додати до корзини"
+#END:main
+
+#START:checkout
+  orders:
+    new:
+      legend:       "Будь-ласка, заповніть деталі"
+    form:
+      name:         "Імʼя"
+      address_html: "Адреса"
+      email:        "E-mail"
+      pay_type:     "Тип оплати"
+      pay_prompt_html: "Виберіть метод оплати"
+      submit:       "Відправити замовлення"
+#END:checkout
+
+#START:flash
+  thanks:          "Дякую за Ваше замовлення"
+#END:flash

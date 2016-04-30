@@ -14,26 +14,26 @@
   <% end %>
 
   <fieldset>
-  <legend>Enter User Details</legend>
+  <legend>Введіть параметри користувача</legend>
 
   <div class="field">
-    <%= f.label :name, 'Name:' %>
+    <%= f.label :name, "Ім`я:" %>
     <%= f.text_field :name, size: 40 %>
   </div>
 
   <div class="field">
-    <%= f.label :password, 'Password:' %>
+    <%= f.label :password, 'Пароль:' %>
     <%= f.password_field :password, size: 40 %>
   </div>
 
   
   <div class="field">
-    <%= f.label :password_confirmation, 'Confirm:' %>
+    <%= f.label :password_confirmation, 'Підтвердіть пароль:' %>
     <%= f.password_field :password_confirmation, size: 40 %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Створити користувача'%>
   </div>
 
   </fieldset>
