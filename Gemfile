@@ -18,6 +18,8 @@ gem 'russian'
 
 gem 'dragonfly', "~>1.0.5"
 
+gem 'twitter-bootstrap-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

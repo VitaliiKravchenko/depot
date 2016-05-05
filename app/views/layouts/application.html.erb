@@ -13,6 +13,7 @@
 <!-- START:i18n -->
   <div id="banner">
 <!-- START_HIGHLIGHT -->
+	<div id="language">
     <%= form_tag store_path, class: 'locale' do %>
       <%= select_tag 'set_locale', 
         options_for_select(LANGUAGES, I18n.locale.to_s),
@@ -21,6 +22,7 @@
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>
 <!-- END_HIGHLIGHT -->
+	</div>
     <%= image_tag("logo.png") %>
     <%= @page_title || t('.title') %>
   </div>
