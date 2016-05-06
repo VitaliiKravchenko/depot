@@ -16,4 +16,4 @@
 /log/*
 !/log/.keep
 /tmp
-/public/system/dragonfly/development/*
+/public/system/dragonfly/development/*/*/*/*
