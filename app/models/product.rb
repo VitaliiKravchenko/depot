@@ -11,8 +11,8 @@ class Product < ActiveRecord::Base
   #                             		with: %r{\.(gif|jpg|png)\Z}i,	
   #                             		message: 'Зображення має бути формату GIF, JPG або PNG'
   #                             			}
-  validates_size_of :image, maximum: 2000.kilobytes,
-                  message: "should be no more than 2000 KB", if: :image_changed?
+  validates_size_of :image, maximum: 7000.kilobytes,
+                  message: "розмір не має перевищувати 7000 KB", if: :image_changed?
   validates_property :format, of: :image, in: [:jpeg, :jpg, :png, :bmp], case_sensitive: false,
                    message: "має бути формату .jpeg, .jpg, .png, .bmp", if: :image_changed?
 
