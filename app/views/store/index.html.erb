@@ -12,7 +12,7 @@
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
       <div class="entry">
-        <%= image_tag product.image.url %>
+        <%= link_to image_tag(product.image.thumb('200x200').url, alt: product.title, class: 'img-thumbnail'), product.image.url, target: '_blank' %>
         <h3><%= product.title %></h3>
         <%= sanitize(product.description) %>
         <div class="price_line">

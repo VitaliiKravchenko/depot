@@ -24,10 +24,10 @@ ru:
 #START:errors
   errors:
     template:
-      body:        "There were problems with the following fields:"
+      body:        "Виникли помилки з наступними полями:"
       header:       
-        one:       "1 error prohibited this %{model} from being saved"
-        other:     "%{count} errors prohibited this %{model} from being saved"
+        one:       "1 помилка завадила цьому %{model} зберегтися"
+        other:     "%{count} помилки завадилицьому %{model} зберегтися"
 #END:errors
 
 #START:layout
