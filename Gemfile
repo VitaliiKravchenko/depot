@@ -20,6 +20,9 @@ gem 'dragonfly', "~>1.0.5"
 
 gem 'twitter-bootstrap-rails'
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -55,6 +55,11 @@ ru:
       add_html:    "Добавить в корзину"
 #END:main
 
+  will_paginate:
+    previous_label: "&#8592; Предыдущая"
+    next_label: "Следующая &#8594;"
+    page_gap: "&hellip;"
+
 #START:checkout
   orders:
     new:

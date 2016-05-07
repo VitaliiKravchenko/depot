@@ -8,9 +8,11 @@
 <%= @sections %>
 
 <%= form_tag(:action => :index)  do %>
-  <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "All"  %>
-  <%= submit_tag "Filter", name: nil %>
+  <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "Усі", onchange: 'this.form.submit()'  %>
+  
 <% end %>
+
+
 
 <h1><%= t('.title_html') %></h1>
 <!-- END_HIGHLIGHT -->
@@ -32,4 +34,5 @@
       </div>
  
   <% end %>
-
+  
+<%= will_paginate  @products %>
