@@ -5,15 +5,22 @@
 <% if @visitings > 4 %>
 <span class="price">Ви відвідали цю сторінку <%=pluralize(@visitings, 'time')%></span>
 <% end %>
+<%= @sections %>
+
+<%= form_tag(:action => :index)  do %>
+  <%= select_tag  "section", options_for_select((@sections), selected: params[:section]) %>
+  <%= submit_tag "Filter", name: nil %>
+<% end %>
 
 <h1><%= t('.title_html') %></h1>
 <!-- END_HIGHLIGHT -->
-<% cache ['store', Product.where(locale: I18n.locale)] do %>
+
   <% @products.each do |product| %>
-    <% cache ['entry', product] do %>
+
       <div class="entry">
         <%= link_to image_tag(product.image.thumb('200x200').url, alt: product.title, class: 'img-thumbnail'), product.image.url, target: '_blank' %>
         <h3><%= product.title %></h3>
+        <h3><%= product.section %></h3>
         <%= sanitize(product.description) %>
         <div class="price_line">
           <span class="price"><%= number_to_currency(product.price) %></span>
@@ -23,6 +30,6 @@
             remote: true %>
         </div>
       </div>
-    <% end %>
+ 
   <% end %>
-<% end %>
+

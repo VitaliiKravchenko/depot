@@ -20,6 +20,12 @@ class Product < ActiveRecord::Base
 		Product.order(:updated_at).last
 	end
 	
+	def self.filter(filter)
+    if filter
+       where(section: filter)
+    end
+  end
+	
 #	def self.all_sections
 #    find_by_sql("SELECT section FROM products GROUP BY section").map(&:section).select {|x| x}
 #  end
