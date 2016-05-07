@@ -13,17 +13,21 @@ class StoreController < ApplicationController
 
 
   def index
-
-
+    @visitings = session_counter
+    #@sections = Product.all_sections
+    #@products = Product.select(params[:section])
+    
+    #@sections = Product.find_by_sql("SELECT section FROM products GROUP BY section").map &:section
+    #@products = params[:section].blank? ? Product.all : Product.find_all_by_section(params[:section])
+    
  	  if params[:set_locale]
      redirect_to store_url(locale: params[:set_locale])
-     @products = Product.where(locale: I18n.locale)
-    else
-      #@products = Product.order(:title)
-      @products = Product.where(locale: I18n.locale)
-        
+     @products = Product.where(locale: I18n.locale) 
+     else
+       @products = Product.where(locale: I18n.locale)
     end
-    @visitings = session_counter
   end
-
+  #def product_params
+  #   params.require(:product).permit(:section)
+  #end
 end

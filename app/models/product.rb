@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
 	has_many :line_items
 	has_many :orders, through: :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
-	validates :title, :description, :image, presence: true
+	validates :title, :description, :image, :section, presence: true
 	validates :price, numericality: {greater_than_or_equal_to: 0.01}
 	validates :title, uniqueness: true
 	validates :image_uid, uniqueness: true
@@ -19,6 +19,18 @@ class Product < ActiveRecord::Base
 	def self.latest
 		Product.order(:updated_at).last
 	end
+	
+#	def self.all_sections
+#    find_by_sql("SELECT section FROM products GROUP BY section").map(&:section).select {|x| x}
+#  end
+
+#  def self.select(section)
+#    if section
+#      find_all_by_section(section)
+#    else
+#      find :all
+#    end
+#  end
 
 	private
 

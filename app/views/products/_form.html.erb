@@ -27,6 +27,10 @@
     <%= f.label :Ціна %><br>
     <%= f.text_field :price %>
   </div>
+    <div class="field">
+    <%= f.label :Розділ %><br>
+    <%= f.select :section, [ 'Весільні', 'Пасхальні', 'Для дому', 'Інші' ] %>
+  </div>
   <div class="field">
     <%= f.label :Мова %><br>
     <%= f.select :locale, LANGUAGES %>
