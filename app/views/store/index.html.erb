@@ -8,7 +8,7 @@
 <%= @sections %>
 
 <%= form_tag(:action => :index)  do %>
-  <%= select_tag  "section", options_for_select((@sections), selected: params[:section]) %>
+  <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "All"  %>
   <%= submit_tag "Filter", name: nil %>
 <% end %>
 

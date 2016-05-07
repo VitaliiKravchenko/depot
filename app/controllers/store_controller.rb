@@ -26,24 +26,37 @@ class StoreController < ApplicationController
       #@products = Product.all
    #  end 
     
- 	  if params[:set_locale]
-     redirect_to store_url(locale: params[:set_locale])
-      if params[:section]
-        @products = Product.where(section: params[:section])
-        @products = @products.where(locale: I18n.locale)
-      else
-        @products = Product.where(locale: I18n.locale)
-      end 
-   else
-      if params[:section]
-        @products = Product.where(section: params[:section])
-        @products = @products.where(locale: I18n.locale)
-      else
-        @products = Product.where(locale: I18n.locale)
+ 	    if params[:set_locale]
+        redirect_to store_url(locale: params[:set_locale])
+        
+        
+          if params[:section] != ""
+            @products = Product.where(section: params[:section])
+            @products = @products.where(locale: I18n.locale)
+          else
+            @products = Product.where(locale: I18n.locale)
+          end
+         
+        else
+         if params[:section] != nil
+          if params[:section] != ""
+            @products = Product.where(section: params[:section])
+            @products = @products.where(locale: I18n.locale)        
+          else
+            @products = Product.where(locale: I18n.locale)
+          end
+        
+        else
+          @products = Product.where(locale: I18n.locale)
+        end 
+        
       end
-   end
+      
+      
+      
   end
     #def product_params
     #   params.require(:product).permit(:section)
     #end
 end
+#options_for_select((@sections, selected: params[:section])
