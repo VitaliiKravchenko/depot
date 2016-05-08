@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ім'я:</strong>
+  <%= @question.name %>
+</p>
+
+<p>
+  <strong>Запитання:</strong>
+  <%= @question.description %>
+</p>
+
+<%= link_to 'Редагувати', edit_question_path(@question) %> |
+<%= link_to 'Назад', questions_path %>

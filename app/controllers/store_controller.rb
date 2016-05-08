@@ -30,6 +30,7 @@ class StoreController < ApplicationController
         redirect_to store_url(locale: params[:set_locale])
         
         
+        
           if params[:section] != ""
             @products = Product.where(section: params[:section])
             @products = @products.where(locale: I18n.locale)
