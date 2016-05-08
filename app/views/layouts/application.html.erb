@@ -13,6 +13,8 @@
 <!-- START:i18n -->
   <div id="banner">
 <!-- START_HIGHLIGHT -->
+<%= hidden_div_if(current_page?('/contact')) do %>
+<%= hidden_div_if(current_page?('/about')) do %>
 	<div id="language">
     <%= form_tag store_path, class: 'locale' do %>
       <%= select_tag 'set_locale', 
@@ -21,6 +23,8 @@
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>
+ <% end %>  
+ <% end %>
 <!-- END_HIGHLIGHT -->
 	</div>
     <%= image_tag("logo.png") %>
@@ -38,10 +42,10 @@
     <!-- END:hidden_div -->
 
       <ul>
-        <li><a href="http://www...."><%= t('.home') %></a></li>
+        <li><%= link_to t('.home'), root_path %></li>
         <li><a href="http://www..../faq"><%= t('.questions') %></a></li>
-        <li><a href="http://www..../news"><%= t('.news') %></a></li>
-        <li><a href="http://www..../contact"><%= t('.contact') %></a></li>
+        <li><a href= about><%= t('.about') %></a></li>
+        <li><a href= contact><%= t('.contact') %></a></li>
       </ul>
 
       <% if session[:user_id] %>

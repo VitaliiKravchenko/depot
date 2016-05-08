@@ -1,4 +1,9 @@
 Depot::Application.routes.draw do
+    get 'static/contact'
+    match '/contact', to: 'static#contact', via: 'get'
+    get 'static/about'
+    match '/about', to: 'static#about', via: 'get'
+
   get 'admin' => 'admin#index'
   
   controller :sessions do
@@ -21,6 +26,9 @@ Depot::Application.routes.draw do
     resources :line_items
     resources :carts
     root 'store#index', as: 'store', via: :all
+    root 'store#index'
+    
+
   end
 end
   # The priority is based upon order of creation: first created -> highest priority.

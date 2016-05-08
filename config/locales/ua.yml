@@ -36,7 +36,7 @@ ua:
       title:       "Свічки на замовлення"
       home:        "Додому"
       questions:   "Запитання"
-      news:        "Новини"
+      about:       "Про свічки"
       contact:     "Контакти"
 #END:layout
 
