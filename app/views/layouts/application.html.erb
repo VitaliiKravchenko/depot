@@ -14,12 +14,12 @@
   <div id="banner">
 <!-- START_HIGHLIGHT -->
 
-<%= show_div_if(current_page?('/ua') || current_page?('/ru') || current_page?('/')) do %>
+<%= show_div_if(request.url.include?('/ua') || request.url.include?('/ru') || current_page?('/')) do %>
 	<div id="language">
-    <%= form_tag store_path, class: 'locale' do %>
+    <%= form_tag root_path, class: 'locale' do %>
       <%= select_tag 'set_locale', 
         options_for_select(LANGUAGES, I18n.locale.to_s),
-        onchange: 'this.form.submit()' %>
+        onchange: 'this.form.submit()', class: "btn btn-large btn-primary" %>
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
     <% end %>

@@ -25,6 +25,11 @@ gem 'bootstrap-will_paginate'
 
 gem 'magnific-popup-rails'
 
+# boostrap styling
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

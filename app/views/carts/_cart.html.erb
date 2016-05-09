@@ -9,7 +9,7 @@
  	</table>
 
 <% unless @order %>
-	<%= button_to t('.checkout'), new_order_path, method: :get %>
+	<%= button_to t('.checkout'), new_order_path, method: :get, class: "btn btn-large btn-primary"%>
 <% end %>
 
-<%= button_to t('.empty'), cart, method: :delete, data: { confirm: 'Ви впевнені?'} %>
+<%= button_to t('.empty'), cart, method: :delete, data: { confirm: 'Ви впевнені?'}, class: "btn btn-large btn-primary" %>

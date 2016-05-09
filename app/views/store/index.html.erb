@@ -8,7 +8,7 @@
 <%= @sections %>
 
 <%= form_tag(:action => :index)  do %>
-  <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "Усі", onchange: 'this.form.submit()'  %>
+  <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "Усі", onchange: 'this.form.submit()', class: "btn btn-large btn-primary"  %>
   
 <% end %>
 
@@ -29,7 +29,7 @@
 <!-- START_HIGHLIGHT -->
           <%= button_to t('.add_html'), line_items_path(product_id: product),
 # END_HIGHLIGHT
-            remote: true %>
+            remote: true, class: "btn btn-large btn-primary" %>
         </div>
       </div>
  

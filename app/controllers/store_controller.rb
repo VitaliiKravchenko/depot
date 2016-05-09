@@ -36,6 +36,7 @@ class StoreController < ApplicationController
             @products = @products.where(locale: I18n.locale)
           else
             @products = Product.where(locale: I18n.locale)
+            
           end
          
         else
@@ -45,10 +46,12 @@ class StoreController < ApplicationController
             @products = @products.where(locale: I18n.locale)        
           else
             @products = Product.where(locale: I18n.locale)
+            
           end
         
         else
           @products = Product.where(locale: I18n.locale)
+          
         end 
         
       end
