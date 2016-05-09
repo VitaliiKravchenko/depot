@@ -20,7 +20,7 @@
   <% @products.each do |product| %>
 
       <div class="entry">
-        <%= link_to image_tag(product.image.thumb('200x200').url, alt: product.title, class: 'img-thumbnail'), product.image.url, target: '_blank' %>
+        <%= link_to(image_tag(product.image.thumb('200x200').url), image_path(product.image.url),  class: 'image-popup-vertical-fit')%>
         <h3><%= product.title %></h3>
         <h3><%= product.section %></h3>
         <%= sanitize(product.description) %>

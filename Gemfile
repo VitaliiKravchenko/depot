@@ -23,6 +23,8 @@ gem 'twitter-bootstrap-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+gem 'magnific-popup-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

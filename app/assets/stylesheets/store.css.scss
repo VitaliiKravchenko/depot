@@ -1,7 +1,7 @@
 // Place all the styles related to the Store controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import "magnific-popup";
 /* START_HIGHLIGHT */
 .store {
   h1 {
@@ -18,14 +18,28 @@
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
     min-height: 250px;
+    
+    .mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
+}
 
-    img {
+    
+//#    img {
      //# width: 200px;
      //# height: 200px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      position: absolute;
-    }
+//#      margin-right: 5px;
+//#      margin-bottom: 5px;
+//#      position: absolute;
+//#    }
 
     h3 {
       font-size: 120%;
@@ -53,4 +67,6 @@
     }
   }
 }
+
+
 /* END_HIGHLIGHT */
