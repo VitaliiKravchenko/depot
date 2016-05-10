@@ -2,10 +2,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<% if @visitings > 4 %>
-<span class="price">Ви відвідали цю сторінку <%=pluralize(@visitings, 'time')%></span>
-<% end %>
-<%= @sections %>
+
 
 <%= form_tag(:action => :index)  do %>
   <%= select_tag  "section",  options_for_select(@sections, selected: params[:section]), include_blank: "Усі", onchange: 'this.form.submit()', class: "btn btn-large btn-primary"  %>

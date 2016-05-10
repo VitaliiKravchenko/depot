@@ -1,9 +1,9 @@
 Depot::Application.routes.draw do
   resources :questions
   
-    get 'static/contact'
+    #get 'static/contact'
     match '/contact', to: 'static#contact', via: 'get'
-    get 'static/about'
+   # get 'static/about'
     match '/about', to: 'static#about', via: 'get'
 
   get 'admin' => 'admin#index'

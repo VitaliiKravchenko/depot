@@ -42,19 +42,19 @@
     <!-- END:hidden_div -->
 
       <ul>
-        <li><%= link_to t('.home'), root_path %></li>
-        <li><a href= questions><%= t('.questions') %></a></li>
-        <li><a href= about><%= t('.about') %></a></li>
-        <li><a href= contact><%= t('.contact') %></a></li>
+        <li><%= link_to t('.home'), root_path, class: "btn btn-large btn-primary" %></li>
+        <li><%= link_to t('.questions'), questions_path, class: "btn btn-large btn-primary" %></li>
+        <li><%= link_to t('.about'), about_path, class: "btn btn-large btn-primary" %></li>
+        <li><%= link_to t('.contact'), contact_path, class: "btn btn-large btn-primary" %></li>
       </ul>
 
       <% if session[:user_id] %>
         <ul>
-          <li><%= link_to 'Замовлення',   orders_path   %></li>
-          <li><%= link_to 'Продукти', products_path %></li>
-          <li><%= link_to 'Користувачі',    users_path    %></li>
+          <li><%= link_to 'Замовлення',   orders_path, class: "btn btn-large btn-primary"   %></li>
+          <li><%= link_to 'Продукти', products_path, class: "btn btn-large btn-primary" %></li>
+          <li><%= link_to 'Користувачі',    users_path, class: "btn btn-large btn-primary"    %></li>
         </ul>
-        <%= button_to 'Вихід користувача', logout_path, method: :delete   %>
+        <%= button_to 'Вихід користувача', logout_path, method: :delete, class: "btn btn-large btn-primary"   %>
       <% end %>
       
 <table cellpadding=0 cellspacing=0 width=178 style="border:solid 1px #fe2020;font-family:Arial;font-size:12px;background-color:#fedf20"><tr><td><table width=100% cellpadding=0 cellspacing=0><tr><td width=8 height=30 background="http://rp5.ua/informer/htmlinfa/topshl.png"  bgcolor=#fe2020> </td><td width=* align=center background="http://rp5.ua/informer/htmlinfa/topsh.png" bgcolor=#fe2020><a style="color:#ffffff; font-family:Arial;font-size: 12px;" href="http://rp5.ua/814/ua"><b>Шпола</b></a></td><td width=8 height=30 background="http://rp5.ua/informer/htmlinfa/topshr.png" bgcolor=#fe2020> </td></tr></table></td></tr><tr><td valign=top style="padding:0;"><iframe src="http://rp5.ua/htmla.php?id=814&lang=ua&um=00000&bg=%23fedf20&ft=%23ffffff&fc=%23fe2020&c=%23000000&f=Arial&s=12&sc=4" width=100% height=264 frameborder=0 scrolling=no style="margin:0;"></iframe></td></tr></table>      

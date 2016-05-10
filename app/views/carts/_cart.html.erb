@@ -7,9 +7,10 @@
  			<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
  		</tr>
  	</table>
-
+<div id="cart_buttons">
 <% unless @order %>
-	<%= button_to t('.checkout'), new_order_path, method: :get, class: "btn btn-large btn-primary"%>
+	<li><%= button_to t('.checkout'), new_order_path, method: :get, class: "btn btn-large btn-primary"%></li>
 <% end %>
 
-<%= button_to t('.empty'), cart, method: :delete, data: { confirm: 'Ви впевнені?'}, class: "btn btn-large btn-primary" %>
+<li><%= button_to t('.empty'), cart, method: :delete, data: { confirm: 'Ви впевнені?'}, class: "btn btn-large btn-primary" %><li>
+</div>
