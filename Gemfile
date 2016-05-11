@@ -25,6 +25,8 @@ gem 'bootstrap-will_paginate'
 
 gem 'magnific-popup-rails'
 
+gem "recaptcha", require: "recaptcha/rails"
+
 # boostrap styling
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'

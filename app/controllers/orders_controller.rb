@@ -31,11 +31,12 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    captcha_message = "The data you entered for the CAPTCHA wasn't correct.  Please try again"
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
-      if @order.save
+      if verify_recaptcha(model: @order,  msg: captcha_message) && @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver_now
