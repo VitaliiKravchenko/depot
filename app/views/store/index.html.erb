@@ -23,7 +23,7 @@
         <%= link_to(image_tag(product.image.thumb('200x200').url), image_path(product.image.url),  class: 'image-popup-vertical-fit')%>
         <h3><%= product.title %></h3>
         <h3><%= product.section %></h3>
-        <%= sanitize(product.description) %>
+       <h4> <%= sanitize(product.description, rows: 4) %></h4>
         <div class="price_line">
           <span class="price"><%= number_to_currency(product.price) %></span>
 <!-- START_HIGHLIGHT -->

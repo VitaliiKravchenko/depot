@@ -22,6 +22,10 @@ ua:
 #END:currency
 
 #START:errors
+    errors:
+      messages:
+        inclusion: "no est&aacute; incluido en la lista"
+        blank:     "поле не може бути пустим"
   errors:
     template:
       body:        "Виникли помилки з наступними полями:"
@@ -73,6 +77,23 @@ ua:
       pay_prompt_html: "Виберіть метод оплати"
       submit:       "Відправити замовлення"
 #END:checkout
+
+#START:question
+  questions:
+    new:
+      legend:       "Будь-ласка, задайте нам питання"
+    edit:
+      legend:       "Будь-ласка, задайте нам питання"
+    index:
+      legend:       "Будь-ласка, задайте нам питання"
+      name:         "Ім'я"
+      description:  "Запитання"
+      submit:       "Нове запитання"
+    form:
+      name:         "Ім'я"
+      description:  "Запитання"
+      submit:       "Відправити запитання"
+#END:question
 
 #START:flash
   thanks:          "Дякую за Ваше замовлення"

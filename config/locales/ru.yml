@@ -22,6 +22,10 @@ ru:
 #END:currency
 
 #START:errors
+    errors:
+      messages:
+        inclusion: "no est&aacute; incluido en la lista"
+        blank:     "поле не может быть пустым"
   errors:
     template:
       body:        "Виникли помилки з наступними полями:"
@@ -72,6 +76,23 @@ ru:
       pay_prompt_html: "Пожалуйста, оберите метод оплаты"
       submit:       "Отправить заказ"
 #END:checkout
+
+#START:question
+  questions:
+    new:
+      legend:       "Пожалуйста, задайте нам вопрос"
+    edit:
+      legend:       "Пожалуйста, задайте нам вопрос"
+    index:
+      legend:       "Пожалуйста, задайте нам вопрос"
+      name:         "Имя"
+      description:  "Описание вопроса"
+      submit:       "Новый вопрос"
+    form:
+      name:         "Имя"
+      description:  "Описание вопроса"
+      submit:       "Отправить вопрос"
+#END:question
 
 #START:flash
   thanks:          "Спасибо за Ваш заказ"

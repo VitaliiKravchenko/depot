@@ -45,14 +45,25 @@
     h3 {
       font-size: 120%;
       font-family: sans-serif;
-      margin-left: 250px;
+      margin-left: 210px;
       margin-top: 0;
       margin-bottom: 2px;
       color: #227;
     }
+    h4 {
+      font-size: 100%;
+      font-family: sans-serif;
+      margin-left: 210px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: black;
+      overflow: auto;
+     //# width: 200px;
+      word-break: break-all;
+    }
 
     p, div.price_line {
-      margin-left: 250px;
+      margin-left: 210px;
       margin-top: 0.5em; 
       margin-bottom: 0.8em; 
 
