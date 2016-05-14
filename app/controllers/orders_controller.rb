@@ -39,7 +39,7 @@ class OrdersController < ApplicationController
       if verify_recaptcha(model: @order,  msg: captcha_message) && @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        OrderNotifier.received(@order).deliver_now
+   #     OrderNotifier.received(@order).deliver_now
         format.html { redirect_to store_url, notice: I18n.t('.thanks')  }
         format.json { render :show, status: :created, location: @order }
       else
