@@ -25,8 +25,8 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product.image_id = params[:file]
-    @product.update_attributes(product_params)
+   # @product.image_id = params[:file]
+   # @product.update_attributes(product_params)
     ##preloaded = Cloudinary::PreloadedFile.new(params[:image_id])
     ##raise "Invalid upload signature" if !preloaded.valid?
     ##@product.image_id = preloaded.identifier
