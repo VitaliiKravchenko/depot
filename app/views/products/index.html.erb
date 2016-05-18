@@ -5,7 +5,7 @@
 <% @products.each do |product| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td>
-      <%= cl_image_tag product.image_id_url, height: 200 %>
+      <%= image_tag product.image_id_url, height: 200 %>
     </td>
     <td class="list_description">
       <dl>
