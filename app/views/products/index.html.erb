@@ -1,10 +1,11 @@
+<%= cloudinary_js_config%>
 <h1>Список продуктів</h1>
 
 <table>
 <% @products.each do |product| %>
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     <td>
-      <%= image_tag(product.image.thumb('200x200').url) %>
+      <%= cl_image_tag product.image_id_url, height: 200 %>
     </td>
     <td class="list_description">
       <dl>

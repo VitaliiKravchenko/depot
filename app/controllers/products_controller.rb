@@ -25,6 +25,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    @product.image_id = params[:file]
+    @product.update_attributes(product_params)
+    ##preloaded = Cloudinary::PreloadedFile.new(params[:image_id])
+    ##raise "Invalid upload signature" if !preloaded.valid?
+    ##@product.image_id = preloaded.identifier
 
     respond_to do |format|
       if @product.save
@@ -80,6 +85,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :price, :locale, :image, :section)
+      params.require(:product).permit(:title, :description, :image_url, :image_id, :price, :locale, :image, :section)
     end
 end

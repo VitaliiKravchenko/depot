@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508090806) do
+ActiveRecord::Schema.define(version: 20160517131815) do
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160508090806) do
     t.string   "locale"
     t.string   "image_uid"
     t.string   "section"
+    t.string   "image_id"
   end
 
   create_table "questions", force: :cascade do |t|

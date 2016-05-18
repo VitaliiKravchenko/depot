@@ -1,3 +1,4 @@
+<%= cloudinary_js_config%>
 <%= form_for(@product) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
@@ -21,7 +22,8 @@
   </div>
   <div class="field">
     <%= f.label :Посилання_на_зображення_url %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :image_id %>
+    <%= f.hidden_field :image_id_cache %><br />
   </div>
   <div class="field">
     <%= f.label :Ціна %><br>

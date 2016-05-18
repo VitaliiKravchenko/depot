@@ -1,3 +1,4 @@
+<%= cloudinary_js_config%>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,7 +13,7 @@
 
 <p>
   <strong>Посилання на зображення url:</strong>
-  <%= image_tag @product.image.url, height: 200 %>
+  <%= cl_image_tag @product.image_id_url, height: 200 %>
 </p>
 
 <p>

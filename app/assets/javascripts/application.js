@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require magnific-popup
+//= require cloudinary
 //= require turbolinks
 //= require_tree .
 

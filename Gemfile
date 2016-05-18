@@ -31,6 +31,9 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 
+gem 'carrierwave'
+gem 'cloudinary'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

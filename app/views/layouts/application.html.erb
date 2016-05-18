@@ -7,8 +7,10 @@
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= cloudinary_js_config%>
 </head>
 <!-- END:head -->
+<%= cloudinary_js_config%>
 <body class="<%= controller.controller_name %>">
 <!-- START:i18n -->
   <div id="banner">
