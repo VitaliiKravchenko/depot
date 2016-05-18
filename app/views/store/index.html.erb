@@ -20,7 +20,7 @@
   <div class="col-md-5">
   
       <div class="entry">
-        <%= link_to((image_tag product.image_id_url , max_height: 200, max_width: 200), image_path(product.image_id_url),  class: 'image-popup-vertical-fit')%>
+        <%= link_to((image_tag product.image_id_url), image_path(product.image_id_url),  class: 'image-popup-vertical-fit')%>
         <h3><%= product.title %></h3>
         <h3><%= product.section %></h3>
        <h4> <%= sanitize(product.description, rows: 4) %></h4>
