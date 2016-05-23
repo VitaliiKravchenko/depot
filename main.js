@@ -297,6 +297,7 @@ if (a) {
 	}
 */
 
+/*
 function pron(name) {
 	if (name) {
 		console.log(name);
@@ -304,11 +305,134 @@ function pron(name) {
 		console.log('not valid');
 	}
 }
-
 pron('Johnny');
 
 var bool = !!'a';
 console.log(typeof bool);
 console.log(bool);
+*/
+/*
+var str = String(false);
+console.log(str);
+console.log(typeof(str));
+*/
+/*
+function printHello() {
+	console.log('***********');
+	console.log('Hello There');
+	console.log('***********');
+}
 
+for (i=0; i<10; i++) {
+	printHello();
+}
+*/
+/*
+function adding(a, b) {
+	c = a+b;
+	console.log(a, '+', b, '=', c);
+}
 
+adding(5, 45);
+*/
+/*
+function adding(a, b, c) {
+	return a+b+c;
+}
+var result = adding(4, 7, 3);
+console.log(result);
+*/
+/*
+var books = [
+	{
+		title: "Prelude to Foundation",
+		author: "Isaac Asimov",
+		numberOfPages: 512
+	},
+	
+	{
+		title: "The Tomb of Atuan",
+		author: "Ursula K. Le Guin",
+		numberOfPages: 192
+	},
+	
+	{
+		title: "Starship Troopers",
+		author: "Robert A. Heinlein",
+		numberOfPages: 263
+	}
+];
+
+//console.log(books.length);
+
+function findBiggestBook(books) {
+	var book = null;
+	var maxPages = 0;
+	
+	for (var i = 0; i < books.length; i++) {
+		if (books[i].numberOfPages > maxPages) {
+			var book = books[i];
+			var maxPages = books[i].numberOfPages;
+		}
+	}
+	return book;
+}
+
+//var theBiggestBook = findBiggestBook(books);
+//console.log(theBiggestBook);
+
+function findBookByTitle(name) {
+	var filtBook = [];
+	for (var i = 0; i < books.length; i++) {
+		
+		var b = books[i].title;
+		var findTitle = b.indexOf(name);
+		
+		
+		if (findTitle > 0) {
+			filtBook.push(b);
+			//filtBook.push('b');
+			//console.log(b);
+		}
+	}
+	//return filtBook;
+	console.log(filtBook);
+}
+
+findBookByTitle('h');
+*/
+/*
+function add(a, b, c) {
+	console.log(a, b, c);
+	console.log(arguments[3], arguments[4]);
+	return a + b + c;
+}
+
+var result = add(1, 2, 3, 4, 5);
+console.log(result);
+*/
+/*
+function add() {
+	total = 0;
+	console.log(arguments);
+	for (var i = 0; i < arguments.length; i++) {
+		total += arguments[i];
+	}
+	return total;
+}
+
+var result = add(3, 6, 7);
+console.log(result);
+
+var result = add(1, 3, 5);
+console.log(result);
+*/
+/*
+function printHello() {
+	console.log('Hello');
+}
+
+printHello();
+
+console.log(typeof printHello());
+*/
